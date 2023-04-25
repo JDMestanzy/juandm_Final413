@@ -1,0 +1,52 @@
+﻿@model Entertainers
+
+<h1>Entertainer Details</h1>
+
+<table>
+    <tr>
+        <td>Stage Name:</td>
+        <td>@Model.EntStageName</td>
+    </tr>
+    <tr>
+        <td>Entertainer SSN:</td>
+        <td>@Model.EntSsn</td>
+    </tr>
+    <tr>
+        <td>Street Address:</td>
+        <td>@Model.EntStreetAddress</td>
+    </tr>
+    <tr>
+        <td>City:</td>
+        <td>@Model.EntCity</td>
+    </tr>
+    <tr>
+        <td>State:</td>
+        <td>@Model.EntState</td>
+    </tr>
+    <tr>
+        <td>ZIP Code:</td>
+        <td>@Model.EntZipCode</td>
+    </tr>
+    <tr>
+        <td>Phone Number:</td>
+        <td>@Model.EntPhoneNumber</td>
+    </tr>
+    <tr>
+        <td>Web Page:</td>
+        <td>@Model.EntWebPage</td>
+    </tr>
+    <tr>
+        <td>Date Entered:</td>
+        <td>@Model.DateEntered</td>
+    </tr>
+    <!-- Add other fields as needed -->
+</table>
+
+<br />
+<br />
+<td class="text-center">
+    <a class="btn btn-primary" asp-action="EditRecord" asp-route-entertainerid="@Model.EntertainerId">Edit</a>
+</td>
+<td class="text-center">
+    <a class="btn btn-danger" asp-action="DeleteRecord" asp-route-entertainerid="@Model.EntertainerId">Delete</a>
+</td>

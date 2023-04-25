@@ -1,0 +1,32 @@
+﻿@model List<Entertainers>
+
+
+<h1>Entertainers!</h1>
+<p>If you would like to add an entertainer, there is a button at the end of the page!</p>
+
+<table class=" table table-bordered table-striped">
+    <thead class= "font-weight-bold">
+        <tr>
+            <th>Stage Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var entertainer in Model)
+        {
+            <tr>
+                <td>@entertainer.EntStageName</td>
+                <td>
+                    <a href="@Url.Action("Details", new { id = entertainer.EntertainerId })">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<br />
+
+<div class="text-center">
+    <a class="btn btn-success" asp-controller="Home" asp-action="AddRecord">Add a Record</a>
+</div>
+

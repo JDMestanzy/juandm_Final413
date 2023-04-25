@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Add Record";
+}
+@model Entertainers
+<h1>@ViewData["Title"]</h1>
+<center>
+    <form class="form-group" method="post" asp-action="AddRecord">
+        <label asp-for="EntStageName"> Stage Name:</label>
+        <input asp-for="EntStageName" type="text" /><br />
+        <label asp-for="EntSsn">Entertainer SSN:</label>
+        <input asp-for="EntSsn" type="text" /><br />
+        <label asp-for="EntStreetAddress">Entertainer Street Address:</label>
+        <input asp-for="EntStreetAddress" type="text" /><br />
+        <label asp-for="EntCity">Entertainer City:</label>
+        <input asp-for="EntCity" type="text" /><br />
+        <label asp-for="EntState">Entertainer State:</label>
+        <input asp-for="EntState" type="text" /><br />
+        <label asp-for="EntZipCode">Entertainer Zip Code:</label>
+        <input asp-for="EntZipCode" type="text" /><br />
+        <label asp-for="EntPhoneNumber">Entertainer Phone Number:</label>
+        <input asp-for="EntPhoneNumber" type="text" /><br />
+        <label asp-for="EntWebPage">Entertainer Web Page:</label>
+        <input asp-for="EntWebPage" type="text" /><br />
+        <label asp-for="EntEmailAddress">Entertainer Email Address:</label>
+        <input asp-for="EntEmailAddress" type="text" /><br />
+        <label asp-for="DateEntered">Date Entered:</label>
+        <input asp-for="DateEntered" type="text" /><br />
+        <button type="submit" class="btn btn-success">Add Entertainer</button>
+    </form>
+
+
+</center>
